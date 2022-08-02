@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Employee Datails</title>
+    <script>
+        function getEmployeeData()
+        {
+            var empidArray=new Array(101,102,103,104,105,106);
+            var nameArray=new Array('Ratan','Fandry','Alexa','Cortana','Jivan','Hary');
+            var deptArray=new Array('Developer','Tester','Data Engr','Designer','Account','HR');
+            var taskArray=new Array('Software Dev','Test Case','Data Manipulation','Web Designer','Salary','IV Schedule');
+            
+            var dynaTblobj=document.getElementById('dynamicTable');
+            
+            
+            for(var i=0;i<empidArray.length;i++)
+            {
+                //alert('Emp Id: '+empidArray[i]+' Name: '+nameArray[i]+' Department: '+deptArray[i]+' Task: '+taskArray[i]);
+
+                var newRow =dynaTblobj.insertRow();
+                var newCell1=newRow.insertCell(0);
+                var newCell2=newRow.insertCell(1);
+                var newCell3=newRow.insertCell(2);
+                var newCell4=newRow.insertCell(3);
+                 
+
+                newCell1.innerHTML=empidArray[i];
+                newCell2.innerHTML=nameArray[i];
+                newCell3.innerHTML=deptArray[i];
+                newCell4.innerHTML=taskArray[i];
+                
+            }
+        }
+    </script>
+</head>
+<body style="background-color:rgb(153, 162, 168)">
+    <h1 style="background-color:brown">Employee Details</h1>
+    <input type="button" name="fetchStdData" Value="Fetch Data" onClick="getEmployeeData();">
+   <table id="dynamicTable" border="1">
+    <tr>
+        <td>Emp Id</td>
+        <td>Name</td>
+        <td>Department</td>
+        <td>Task</td>
+    </tr>
+   </table>
+</body>
+</html>

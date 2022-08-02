@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var ob={"ename":"siddhesh",
+                "qualifi":"BE",
+                "display":function()
+                {
+                    alert("Name: "+this.ename+"Qual: "+this.qualifi);
+                }
+            
+            }
+    function createStud(id,nm,per)
+    {
+        var ob={};
+        ob.sid=id;
+        ob.name=nm;
+        ob.percent=per;
+        return ob;
+    }
+
+   /*var s1=createStud(1,"Rakesh",89);
+    var s2=createStud(2,"Prakash",78);
+    console.log(s1);
+    console.log(s2);
+    */
+
+    //constructor function
+    function Student(id,nm,per)
+    {
+     //var this={};
+        console.log(this);
+        this.sid=id;
+        this.name=nm;
+        this.percent=per;
+        this.print=function()
+        {
+            alert("Welcome "+this.name+" Your Percent is"+this.percent);
+        }
+        
+        //return this;
+    }
+    Student.prototype.passoutyear=2021;
+    var s1=new Student(1,"om",90);
+ 
+    var s2=new Student(2,"Aditya",90)
+    console.log(s1);
+    console.log(s2);
+  
+    //call apply bind
+    function hi()
+    {
+        console.log(this);
+    }
+
+    var e1={"firstname":"Aditya",
+            "lastname":"Pawar",
+           
+           
+        };
+
+ 
+
+        var trainer={"firstname":"Deepa"," lastname":"Shah"};
+       // e1.display.call(trainer);
+        //common to display data of any
+
+        function display()
+        {
+            
+            alert("Name"+this.firstname+" "+"Surname"+this.lastname);
+            
+        
+        }
+        display.call(e1)
+        display.call(trainer);
+
+        function print(city,email,mob)
+        {
+            alert("Name: "+this.firstname+" "+"Surname: "+this.lastname+" "+"City: "+city+" "+"Email: "+email);
+
+        }
+        //print.call(trainer,"Pune","Deepa",894564);
+
+        var arr=["Pune","Aditya@gmail.com",654634];
+        //print.apply(e1,arr)
+
+        var ff=print.bind(trainer);
+
+        ff("Mumbai","Shubhu@gmail.com",484512)
+
+
+    //Book
+
+   /* function Book(bid,bnm,bauthor,bprice)
+    {
+        var bk={};
+        this.id=bid;
+        this.nm=bnm;
+        this.author=bauthor;
+        this.price=bprice;
+        this.print=function()
+        {
+            alert
+        }
+    }*/
+    
+        
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

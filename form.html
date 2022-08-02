@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function Validate()
+        {
+            var data="";
+            data=data+document.getElementById("fname").value;
+            data=data+document.getElementById("addr").value;
+            data=data+document.getElementById("mb1").value;
+
+            var arrgender=document.getElementsByName("r1");
+            for(var i=0;i<arrgender.length;i++
+             )
+            {
+             if(arrgender[i].checked)
+             data=data+arrgender[i].value;
+            }
+            var arrtech=document.getElementsByName("ck1");
+            for(var i=0;i<arrtech.length;i++
+             )
+            {
+             if(arrtech[i].checked)
+             data=data+arrtech[i].value;
+            }
+
+            var cityindx=document.getElementById("s1").SelectedIndex;
+            var city=document.getElementById("s1").options[cityindx].Value;
+            alert(city);
+        
+            console.log(data);
+            
+        }
+       
+
+    </script>
+    
+   
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+    <form method="get" action="serv">
+    Name: <input type="text" name="" required="required" placeholder="First Name" id="fname">
+    <br>
+    Address: <input type="text" name="" id="addr">
+    <br>
+    Mobile: <input type="number" name="" id="mb1">
+    <br>
+    Gender:<input type="radio" name="r1" value="Male">Male
+    <input type="radio" name="r1" value="Female">Female
+    <br>
+
+    Technical Skills: <input type="checkbox" name="ck1" value="Java">Java
+    <input type="checkbox" name="ck1" value="Java">csharp
+    <input type="checkbox" name="ck1" value="Java">Python
+    <input type="checkbox" name="ck1" value="Java">React
+    <br>
+    
+    City: <select name="s1" id="s1">
+        <option value="Pune">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Nashik">Nashik</option>
+        <option value="Nagpur">Nagpur</option>
+
+    </select>
+    <input type="button" name="" value="validate" onclick="Validate()">
+    <input type="submit" value="submit"> 
+</form>
+</body>
+</html>

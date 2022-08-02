@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script type="text/javascript">
+        function m1(a,b,...n)      
+        {
+            console.log(n);
+            for( var i=0;i<n.length;i++)
+            {
+                console.log(n[i]);
+            }
+            console.log("***********");
+            for(let data of n)
+            console.log(data);
+        }
+        var arr=[1,2,3,4]
+        function m2(a,b,c,d)
+        {
+            console.log(`a=${a} b=${b} c=${c} d=${d}`);
+        }
+
+        var arr=[12,"om",8,90.6];
+        m1(...arr); //array spreadout
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

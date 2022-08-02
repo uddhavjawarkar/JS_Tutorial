@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="div1">
+        <h4 id="myh1">Online Tutorials
+        <p id="p1">Farmers are the backbone of our society. They are the ones who provide us all the food that we eat. 
+            As a result, the entire population of the country depends upon farmers. 
+            Be it the smallest or the largest country. 
+            Because of them only we are able to live on the planet. 
+            Thus Farmers are the most important people in the world. 
+            Though farmers have so much importance still they do not have proper living.
+            Importance of farmers.Farmers have great importance in our society. 
+            They are the ones who provide us food to eat. Since every person needs proper food for their living, so they are a necessity in society.
+        </p>
+    </h4>
+    </div>
+    <script type="text/javascript">
+        function greet()
+        {
+            alert(" div says Good Morning");
+        }
+
+        var div1=document.getElementById("div1");
+
+        var h1=document.getElementById("myh1");
+        var p1=document.getElementById("p1");
+
+        //div1.addEventListener('click,greet,true');
+        h1.addEventListener('mouseout',()=>alert("h1 says: Good Afternoon"),true);
+        p1.addEventListener('click',()=>alert("para says : Byes"),true);
+
+    </script>
+</body>
+</html>

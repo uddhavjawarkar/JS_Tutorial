@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <script type="text/javascript">
+        function iseven(n)
+        {
+            return n%2==0;
+        }
+
+        function m1(ele,sum)
+        {
+            console.log(`element:${ele} sum=${sum}`);
+            sum=sum+ele;
+            return sum;
+        }
+
+        var arr=[12,25,14,26];
+        //var a=arr.filter(iseven);
+        //Filtering
+        var b=arr.filter((n)=>n%3==0);
+        console.log(b);
+        //apply given callback function to every element
+        var c=arr.map((element)=>element+2);
+        console.log(c);
+        console.log(arr);
+        //reduce take callback function and reduces it to single value
+        var sum=arr.reduce((sum,d)=>sum=sum+d);
+        console.log("sum="+sum);
+
+        var nm=["Ketaki","Sonam","Aditya","Ashok"];
+        nm.sort();
+        console.log(nm);
+        //custom callback function in sort where 2 values are compare accordingly +1 or -1
+        arr.sort((n1,n2)=>n1<n2?-1:+1);
+        console.log(arr);
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

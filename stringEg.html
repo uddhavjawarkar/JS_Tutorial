@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script type="text/javascript">
+    var str="Poonam";
+    console.log(str);
+    console.log(str.charAt(0));
+    console.log(str.toUpperCase());
+    //console.log(str.toLowerCase());
+    console.log(str.substring(0,3));
+    console.log(str.replace('o','i'));
+    console.log(str);
+    /*for(var i=0;i<str.length;i++)
+    {
+        alert(str.charAt(i));
+    }
+    var ch="A";
+    console.log(ch.charCodeAt(0));*/
+
+    var s=65;
+    console.log(String.fromCharCode(s));
+
+    var s2="";
+    for(var j=0;j<str.length;j++)
+    {
+        var ch=str.charAt(j);
+        if(ch=="a" || ch=="e"||ch=="i" || ch=="o"||ch=="i")
+        {
+            var ascii=str.charCodeAt(j); //string to ascii
+            ascii++;
+            var c1=String.fromCharCode(ascii);
+            s2=s2+ch;
+        }
+        else
+        s2=s2+ch
+    }
+    alert("@@@@@"+s2)
+                          
+   </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
